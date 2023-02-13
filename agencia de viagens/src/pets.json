@@ -1,0 +1,35 @@
+[
+  {
+    "id": 0,
+    "name": "Tóquio",
+    "picture": "images/toquio.jpeg",
+    "breed": "Available",
+    "age": 32,
+    "location": "Japão"
+  },
+  {
+    "id": 1,
+    "name": "Rio de Janeiro",
+    "picture": "images/rio.png",
+    "age": 16,
+    "breed": "Available",
+    "location": "Brasil"
+  },
+  {
+    "id": 2,
+    "name": "Fernando de Noronha",
+    "picture": "images/fer.png",
+    "age": 4,
+    "breed": "Available",
+    "location": "Brasil"
+  },
+  {
+    "id": 3,
+    "name": "Paris",
+    "picture": "images/franca.png",
+    "age": 4,
+    "breed": "Available",
+    "location": "França"
+  }
+
+]
