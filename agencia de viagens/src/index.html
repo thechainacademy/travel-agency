@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Travel Agency</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <div style="text-align: center;">
+        <img src="images/tca.png" alt="Descripción de la imagen">
+      </div>
+
+          <h2 {
+                font-family: Roboto Condensed, sans-serif;
+              <strong> <h1 class="text-center"></h1></strong>
+          <hr/>
+          <br/>
+        </div>
+      </div>
+
+      <div id="petsRow" class="row">
+        <!-- PETS LOAD HERE -->
+      </div>
+    </div>
+
+    <div id="petTemplate" style="display: none;">
+      <div class="col-sm-10 col-md-4 col-lg-3">
+        <div class="panel panel-default panel-pet">
+          <div class="panel-heading">
+            <h4 class="panel-title">Scrappy</h4>
+          </div>
+          <div class="card-tag card-tag-top">
+
+
+        </div>
+          <div class="panel-body">
+            <img alt="140x160" data-src="holder.js/140x160" class="img-rounded img-center" style="width: 100%;" src="https://br.images.search.yahoo.com/search/images?p=imagens+de+new+york+city&fr=mcafee&type=E210BR91199G0&imgurl=https%3A%2F%2Fs1.1zoom.me%2Fbig3%2F366%2F421441-svetik.jpg#id=1&iurl=https%3A%2F%2Fs1.1zoom.me%2Fbig3%2F366%2F421441-svetik.jpg&action=click" data-holder-rendered="true">
+            <br/><br/>
+            <strong>Situation</strong>: <span class="pet-breed">Disponivel</span><br/>
+           <!-- <strong>Age</strong>: <span class="pet-age">3</span><br/>-->
+
+            <strong>Location</strong>: <span class="pet-location">Warren, MI</span><br/><br/>
+            <div style="text-align: center;">
+
+
+            </div><button style="background-color: purple; color: white;">PURCHASE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
+
+ <section  id="servicos" class="servicos">
+        <hr>
+    <h1 class="servicos-title">Services</h1>
+    <div class="servicos-cards">
+      <div class="card">
+        <i data-feather="map"></i>
+        <div class="card-content">
+          <h3>Guided Tours</h3>
+          <p>Here, we offer a variety of amazing tours in destinations around the world. Our experienced and knowledgeable guides will accompany you every step of your journey, sharing fascinating stories, useful tips and local knowledge that will enrich your travel experience.</p>
+        </div>
+        <button>Know more</button>
+      </div>
+
+      <div class="card">
+        <i data-feather="camera"></i>
+        <div class="card-content">
+          <h3>Professional Photography</h3>
+          <p>Professional travel photography is a wonderful way to capture incredible moments and create lasting memories of your adventures. With a professional photographer by your side, you'll have the opportunity to capture stunning images of stunning landscapes, fascinating architecture, unique cultures and exciting experiences.</p>
+        </div>
+        <button>Know more</button>
+      </div>
+
+      <div class="card">
+        <i data-feather="navigation"></i>
+        <div class="card-content">
+          <h3>Vehicle Rental</h3>
+          <p>Car hire is a popular option for travelers who want to explore new places with freedom and flexibility. With car hire, you can reach places that would be difficult to reach by public transport, and you can also plan your trip based on your own preferences and schedule.</p>
+        </div>
+        <button>Know more</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="contato">
+    <div class="contato-card">
+      <h1>Contact</h1>
+      <ul> <h4>
+        <li> <a href="https://thechainacademy.dev">Pagina Principal</a>
+        <!--<li><i data-feather="map-pin"></i>Rua central</li>-->
+        <hr><li> <a href="mvenicio141@gmail.com">mvenicio141@gmail.com</a>
+        <li><i data-feather="phone"></i>(87) 9 8133-5491</li>
+      </ul></h4>
+    </div>
+
+
+
+       <div id="map"></div>
+  </section>
+
+
+  <script>
+    // feather icons
+    feather.replace();
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+            });
+        });
+    });
+    // Initialize and add the map
+    function initMap() {
+      // The location of Uluru
+      // var uluru = {lat: -25.344, lng: 131.036};
+      var uluru = { lat: -3.71839, lng: -38.5434 };
+      // The map, centered at Uluru
+      var map = new google.maps.Map(
+        document.getElementById('map'), { zoom: 4, center: uluru });
+      // The marker, positioned at Uluru
+      var marker = new google.maps.Marker({ position: uluru, map: map });
+    }
+  </script>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+  </script>
+</body>
+</html>
+ <!--
+IMAGEM DO AVIAO AO FUNDO DA PAGINA
+<html>
+  <head>
+    <style>
+      body {
+        background-image: url("images/aviaocapa.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: brightness(0.8);
+      }
+    </style>
+
+<html>
+  <head>
+    <style>
+      .header {
+        background-image: url("images/aviaoo.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 500px;
+        text-align: center;
+      }
+      .header h1 {
+        padding-top: 200px;
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+      }
+-->
+
+
